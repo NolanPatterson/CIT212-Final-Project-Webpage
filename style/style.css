@@ -1,0 +1,141 @@
+* {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../font/Roboto/Roboto-Regular.ttf);
+}
+
+html {
+    font-family: "Roboto-Regular";
+    color: #333333;
+    background-color: #DFD1A7;
+}
+
+.masthead, .menu, .title, .footer{
+    text-align: center;
+}
+
+.masthead, .title {
+    color: #9D2235
+}
+
+.masthead, .menu {
+    background-color: #fff;
+}
+
+.masthead {
+    font-size: 48px;
+}
+
+.menu {
+    font-size: 18px;
+    padding: 20px;
+}
+
+a, p {
+    text-decoration: none;
+    color: #333333;
+}
+
+a h1, nav a ,.profile a{
+    box-shadow: inset 0 0 0 0 #9D2235;
+    padding: 15px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+nav a:hover, a h1:hover, .profile a:hover {
+    box-shadow: inset 300px 0 0 0 #9D2235;
+    color: #fff;
+}
+
+nav a, nav a:hover {
+    border-radius: 10px;
+}
+
+a h1, a h1:hover {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.container, .instructions, .profile img, .building img  {
+    border: 2px solid #333333;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px #9D2235;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container, .instructions {
+    padding: 30px;
+    margin: 30px;
+}
+
+.intro, .about {
+    padding-bottom: 30px;
+}
+
+p {
+    text-indent: 3ch;
+    padding: 10px;
+    text-align: left;
+}
+
+.profile img, .building img {
+    margin: 20px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.profile a {
+    margin-top: 25px;
+    height: 30px ;
+    width: 30px ;
+    padding: 5px 5px;
+    border-radius: 4px;
+    line-height: 20px;
+    color: #333333;
+    background-color: #fff;
+}
+
+@media screen and (min-width: 800px) {
+    
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }    
+    
+    .intro, .about {
+        flex: 3;
+        order: 2;
+        min-height: 65vh;
+        padding-right: 30px;
+    }
+    
+    .profile {
+        flex: 1;
+        order: 3;
+    }
+
+    .building {
+        flex: 2;
+        order: 3;
+    }
+    
+    .footer {
+        order: 4;
+    }  
+  }
